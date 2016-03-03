@@ -9,6 +9,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public final class JSONUtils {
 
+	private static final String EMPTY_JSON="{}";
+	
 	private JSONUtils(){
 		throw new AssertionError(
 			"Don't try to access Private constructor."
@@ -25,6 +27,6 @@ public final class JSONUtils {
 		} catch (final JsonProcessingException processingException) {
 			processingException.printStackTrace();
 		}
-		return null;
+		return EMPTY_JSON;
 	}
 }
